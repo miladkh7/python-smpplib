@@ -319,7 +319,7 @@ class Client(object):
         Called when SMPP server accept message (SUBMIT_SM_RESP).
         May be overridden
         """
-        self.logger.warning('Message sent handler (Override me)')
+        self.logger.warning(f"message_id:{pdu.message_id}")
 
     def query_resp_handler(self, pdu, **kwargs):
         """Custom handler to process response to queries. May be overridden"""
